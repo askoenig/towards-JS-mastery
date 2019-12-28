@@ -13,3 +13,10 @@ function canNest(arr1, arr2) {
   if (arr1min > arr2min && arr1max < arr2max) return true;
   else return false;
 }
+//Refactor:
+
+function canNest(arr1, arr2) {
+  return (
+    Math.min(...arr1) > Math.min(...arr2) && Math.max(arr1) < Math.max(arr2)
+  );
+}
