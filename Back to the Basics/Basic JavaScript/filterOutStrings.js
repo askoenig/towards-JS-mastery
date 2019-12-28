@@ -7,3 +7,9 @@ function filterArray(arr) {
   }
   return newArr;
 }
+
+//refactor
+
+function filterArray(arr) {
+  return arr.filter(num => typeof num === "number");
+}
