@@ -7,3 +7,10 @@ function addUp(num) {
   }
   return accumulator;
 }
+
+//refactor
+
+function addUp(num) {
+  if (num === 1) return 1;
+  return num + addUp(num - 1);
+}
