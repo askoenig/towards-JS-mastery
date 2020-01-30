@@ -9,3 +9,15 @@ function rev(n) {
     .join("");
   return Number(reverse);
 }
+
+//refactor
+
+function rev(n) {
+  return Number(
+    Math.abs(n)
+      .toString()
+      .split("")
+      .reverse()
+      .join("")
+  );
+}
