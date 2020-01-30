@@ -9,3 +9,9 @@ function largestSwap(num) {
   console.log(num, reversedNum);
   return reversedNum === num || reversedNum < num ? true : false;
 }
+
+//refactor that I don't understand
+
+function largestSwap(num) {
+  return num / 10 > num % 10;
+}
