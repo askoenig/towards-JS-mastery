@@ -8,3 +8,9 @@ function countVowels(str) {
   }
   return counter;
 }
+
+// refactor
+
+function countVowels(str) {
+  return str.match(/[aeiou]/g).length;
+}
