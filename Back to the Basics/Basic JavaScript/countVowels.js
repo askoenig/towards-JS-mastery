@@ -14,3 +14,9 @@ function countVowels(str) {
 function countVowels(str) {
   return str.match(/[aeiou]/g).length;
 }
+
+// non regex refactor
+
+function countVowels(str) {
+  return str.split("").filter(x => "aeiouAEIOU".includes(x)).length;
+}
