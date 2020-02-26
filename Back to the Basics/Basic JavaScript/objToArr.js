@@ -7,3 +7,7 @@ function toArray(obj) {
   }
   return objArr;
 }
+
+// refactor
+
+const toArray = obj => Object.entries(obj);
