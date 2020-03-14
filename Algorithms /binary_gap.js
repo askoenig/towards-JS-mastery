@@ -16,3 +16,26 @@
 
 // this solution has time complexity of O(n)
 // space complexity O(n)
+
+function solution(N) {
+  let binaryNum = N.toString(2);
+  let indexes = [];
+  let binaryLengths = [];
+  let largestGap = 0;
+
+  binaryNum.split("").forEach((num, idx) => {
+    if (num == 1) indexes.push(idx);
+  });
+
+  if (indexes.length > 1) {
+    for (let i = indexes.length - 1; i > 0; i--) {
+      binaryLengths.push(indexes[i] - indexes[i - 1] - 1);
+    }
+
+    largestGap = binaryLengths.reduce((accu, curr) => {
+      return curr > accu ? curr : accu;
+    });
+  }
+
+  return largestGap;
+}
