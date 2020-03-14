@@ -42,3 +42,22 @@ function solution(N) {
 
 //this solution is just as fast O(n)
 //better space complexity O(1)
+
+function solution(N) {
+  let binaryNum = N.toString(2);
+  let largestGap = 0;
+  let gapLength = 0;
+
+  binaryNum.split("").forEach(num => {
+    if (num == 0) {
+      gapLength++;
+    }
+
+    if (num == 1) {
+      if (largestGap < gapLength) largestGap = gapLength;
+      gapLength = 0;
+    }
+  });
+
+  return largestGap;
+}
