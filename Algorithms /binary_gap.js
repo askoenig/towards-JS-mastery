@@ -39,3 +39,6 @@ function solution(N) {
 
   return largestGap;
 }
+
+//this solution is just as fast O(n)
+//better space complexity O(1)
