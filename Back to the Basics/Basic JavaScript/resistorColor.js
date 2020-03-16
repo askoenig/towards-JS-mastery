@@ -13,3 +13,20 @@
 // Grey: 8
 // White: 9
 // Mnemonics map the colors to the numbers, that, when stored as an array, happen to map to their index in the array: Better Be Right Or Your Great Big Values Go Wrong.
+
+export const colorCode = color => {
+  return COLORS.indexOf(color);
+};
+
+export const COLORS = [
+  "Black",
+  "Brown",
+  "Red",
+  "Orange",
+  "Yellow",
+  "Green",
+  "Blue",
+  "Violet",
+  "Grey",
+  "White"
+];
