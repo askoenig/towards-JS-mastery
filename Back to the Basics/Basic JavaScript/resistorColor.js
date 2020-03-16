@@ -19,14 +19,14 @@ export const colorCode = color => {
 };
 
 export const COLORS = [
-  "Black",
-  "Brown",
-  "Red",
-  "Orange",
-  "Yellow",
-  "Green",
-  "Blue",
-  "Violet",
-  "Grey",
-  "White"
+  "black",
+  "brown",
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "blue",
+  "violet",
+  "grey",
+  "white"
 ];
