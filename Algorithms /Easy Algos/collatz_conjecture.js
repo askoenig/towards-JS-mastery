@@ -79,3 +79,17 @@ export const steps = n => {
 
 // above I removed the recursion completely and incompetently tried to incorporate a while loop
 // FINAL PASS:
+
+export const steps = n => {
+  if (n < 1) {
+    throw "Only positive numbers are allowed";
+  }
+  let counter = 0;
+  while (n !== 1) {
+    n % 2 === 0 ? (n = n / 2) : (n = n * 3 + 1);
+    counter++;
+  }
+  return counter;
+};
+
+//proper while loop and I believe minimal possible readable code
