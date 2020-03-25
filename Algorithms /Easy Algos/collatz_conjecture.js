@@ -57,3 +57,25 @@ export const steps = (n, count = 0) => {
 };
 
 // here I tried to catch high value args to run them through a loop so as to avoid blowing out the stack via recursion. I think this acutally might have worked if my for loop syntax was better. Regardless, still far from optimal.
+// THIRD PASS:
+
+export const steps = n => {
+  let counter = 0;
+  if (n <= 0) {
+    throw "Only positive numbers are allowed";
+  } else {
+    while (n !== 1) {
+      if (n % 2 === 0) {
+        n = n / 2;
+        counter++;
+      } else if (n % 3 === 0 || n % 5 === 0) {
+        n = n * 3 + 1;
+        counter++;
+      }
+    }
+  }
+  return counter;
+};
+
+// above I removed the recursion completely and incompetently tried to incorporate a while loop
+// FINAL PASS:
