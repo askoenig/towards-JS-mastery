@@ -11,3 +11,16 @@ var singleNumber = function(nums) {
     }
   }
 };
+
+// refactored:
+
+var singleNumber = function(nums) {
+  const store = {};
+  for (let i = 0; i < nums.length; i++) {
+    if (store[nums[i]] === undefined) store[nums[i]] = 1;
+    else store[nums[i]] = store[nums[i]] + 1;
+  }
+  for (let key in store) {
+    if (store[key] === 1) return key;
+  }
+};
