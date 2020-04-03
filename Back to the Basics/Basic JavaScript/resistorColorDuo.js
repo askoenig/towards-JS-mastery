@@ -2,5 +2,10 @@
 
 // The colors are mapped to the numbers from 0 to 9 in the sequence: Black - Brown - Red - Orange - Yellow - Green - Blue - Violet - Grey - White
 
+export const decodedValue = colorArr =>
+  Number("" + colorValues[colorArr[0]] + colorValues[colorArr[1]]);
+
+// refactor:
+
 export const decodedValue = ([firstColor, secondColor]) =>
   Number("" + colorValues[firstColor] + colorValues[secondColor]);
