@@ -9,3 +9,8 @@ export const decodedValue = colorArr =>
 
 export const decodedValue = ([firstColor, secondColor]) =>
   Number("" + colorValues[firstColor] + colorValues[secondColor]);
+
+//   meaningless refactor:
+
+export const decodedValue = ([firstColor, secondColor]) =>
+  Number(`${colorValues[firstColor]}` + `${colorValues[secondColor]}`);
